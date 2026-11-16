@@ -43,8 +43,6 @@ Open the page on its own:
 
     bin/jobboard serve
 
-Then go to http://127.0.0.1:8820/jobs/.
-
 Or use the terminal:
 
     bin/jobboard                          # overview and top matches
