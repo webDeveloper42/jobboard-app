@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Launcher for the job board. `jobboard` shows your top matches; `jobboard --help` for commands.
+DIR="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}" exec python3 -m jobboard "$@"

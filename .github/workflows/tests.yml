@@ -1,0 +1,32 @@
+# Runs the tests on every push and pull request. Tests that need your other dashboard apps (Sheets, Docs, Notes)
+# are skipped here; the browser smoke test needs your data copy, so it runs only on the server (./dev browser).
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Engine tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Page unit tests
+        run: node --test web/tests/*.test.mjs
+
+      - name: Page modules parse
+        run: for f in $(find web/js -name '*.js'); do node --check --input-type=module < "$f" || exit 1; done

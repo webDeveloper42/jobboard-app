@@ -1,0 +1,9 @@
+/* .score-bars: how the match score is made up. .reasons lists why; .keyword-coverage shows resume keywords. */
+.score-bars { display: grid; gap: var(--space-2); max-width: 520px; }
+.score-bars__row { display: grid; grid-template-columns: 76px 1fr 42px; gap: var(--space-3); align-items: center; font-size: 13px; color: var(--color-ink-mid); }
+.score-bars__value { text-align: right; color: var(--color-ink); font-weight: 650; }
+.reasons { margin: var(--space-4) 0 0; padding-left: 20px; color: var(--color-ink-mid); display: grid; gap: 4px; }
+.reasons__item::marker { color: var(--color-accent); }
+.keyword-coverage { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-4); font-size: 13px; color: var(--color-ink-mid); }
+.keyword-coverage .meter { flex: 1 1 120px; max-width: 220px; }
+.score-bars__label { white-space: nowrap; }

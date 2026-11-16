@@ -1,0 +1,6 @@
+/* .active-filters: the filters that are on, as removable chips, plus "Clear all". */
+.active-filters { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-5); border-bottom: 1px solid var(--color-line); flex: none; }
+.link-button { color: var(--color-ink-soft); font-size: 12.5px; text-decoration: underline; text-underline-offset: 3px; }
+.link-button:hover { color: var(--color-ink); }
+
+@media (max-width: 900px) { .active-filters { padding: var(--space-2) var(--space-4); } }

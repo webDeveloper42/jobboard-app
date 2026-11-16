@@ -1,0 +1,7 @@
+/* .dialog: the pop-up. __form holds __title, the content and __actions. */
+.dialog { background: var(--color-panel); color: var(--color-ink); border: 1px solid var(--color-line-strong); border-radius: var(--radius-lg); padding: 0; width: min(560px, 94vw); box-shadow: var(--shadow); }
+.dialog::backdrop { background: rgba(0, 0, 0, .6); }
+.dialog__form { padding: var(--space-5); display: grid; gap: var(--space-3); }
+.dialog__title { margin: 0; font-size: 17px; }
+.dialog__actions { display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-2); }
+.dialog p { margin: 0; }

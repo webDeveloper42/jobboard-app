@@ -1,0 +1,20 @@
+/* .job-detail: the open job. __header stays pinned while you scroll the tab __panel. */
+.job-detail { max-width: 920px; }
+.job-detail__header { position: sticky; top: 0; z-index: 3; background: var(--color-bg); padding: var(--space-5) var(--space-5) 0; border-bottom: 1px solid var(--color-line); }
+.job-detail__back { display: none; margin-bottom: var(--space-2); }
+.job-detail__headline { display: flex; gap: var(--space-4); align-items: flex-start; }
+.job-detail__main { flex: 1; min-width: 0; }
+.job-detail__title { margin: 0; font-size: 22px; line-height: 1.25; letter-spacing: -.01em; }
+.job-detail__company { color: var(--color-ink-mid); margin-top: 4px; font-size: 14.5px; }
+.job-detail__tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
+.job-detail__tags:empty { display: none; }
+.job-detail__score { border-radius: 50%; flex: none; }
+.job-detail__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin-top: var(--space-4); }
+.job-detail__status select { min-height: var(--control-height); font-weight: 600; }
+.job-detail__panel { padding: 0 var(--space-5) var(--space-6); }
+
+@media (max-width: 900px) {
+  .job-detail__back { display: inline-flex; }
+  .job-detail__header { padding: var(--space-3) var(--space-4) 0; }
+  .job-detail__panel { padding: 0 var(--space-4) var(--space-6); }
+}

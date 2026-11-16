@@ -1,0 +1,6 @@
+/* .empty-state: a centred "nothing here yet" message with an optional icon and button. */
+.empty-state { padding: 64px 24px; text-align: center; color: var(--color-ink-mid); display: grid; justify-items: center; gap: var(--space-2); max-width: 440px; margin: 0 auto; }
+.empty-state > svg { color: var(--color-ink-soft); }
+.empty-state__title { color: var(--color-ink); font-size: 16px; }
+.empty-state__text { margin: 0; }
+.empty-state .button { margin-top: var(--space-2); }

@@ -1,0 +1,5 @@
+/* .toast: a short message at the bottom of the screen. --error for problems. */
+.toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: #2b2d35; border: 1px solid var(--color-line-strong); color: var(--color-ink); padding: 10px 16px; border-radius: var(--radius); z-index: 50; max-width: min(560px, 92vw); box-shadow: var(--shadow); }
+.toast--error { background: #3c1d23; border-color: #6b2d36; }
+
+@media (max-width: 900px) { .toast { bottom: calc(var(--bottom-nav-height) + 12px); } }

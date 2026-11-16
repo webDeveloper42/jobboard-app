@@ -1,0 +1,15 @@
+/* .field: a label above its control, with an optional __hint below. --wide spans both columns of .form-grid.
+   .checkbox: a checkbox with its label. .form-grid: two columns of fields (one on phones). */
+.field { display: grid; gap: 5px; font-size: 12.5px; color: var(--color-ink-mid); font-weight: 550; align-content: start; }
+.field--wide { grid-column: 1 / -1; }
+.field input, .field select, .field textarea { font-size: 14px; font-weight: 400; }
+.field__hint { font-weight: 400; color: var(--color-ink-soft); }
+.field .chip-list { margin-top: 0; }
+
+.checkbox { display: inline-flex; align-items: center; gap: var(--space-2); cursor: pointer; color: var(--color-ink-mid); min-height: 32px; }
+.checkbox__input { width: 16px; height: 16px; min-height: 0; accent-color: var(--color-accent); margin: 0; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3) var(--space-4); }
+
+@media (max-width: 900px) { .form-grid { grid-template-columns: 1fr; } }
+.field__label { display: block; }

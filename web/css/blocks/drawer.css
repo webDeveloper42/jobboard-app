@@ -1,0 +1,8 @@
+/* .drawer: the open job beside the Applications board (full screen on phones). */
+.drawer { width: 48%; max-width: 680px; min-width: 380px; border-left: 1px solid var(--color-line); overflow-y: auto; flex: none; background: var(--color-bg); }
+.drawer__close { position: sticky; top: 0; z-index: 4; display: flex; justify-content: flex-end; padding: var(--space-2) var(--space-3) 0; background: var(--color-bg); }
+.drawer .job-detail__header { top: 38px; padding-top: var(--space-2); }
+
+@media (max-width: 900px) {
+  .drawer { position: fixed; inset: 0 0 var(--bottom-nav-height); width: auto; max-width: none; min-width: 0; z-index: 20; }
+}

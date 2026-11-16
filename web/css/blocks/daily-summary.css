@@ -1,0 +1,8 @@
+/* .daily-summary: this morning's run, at the top of the list. */
+.daily-summary { border: 1px solid var(--color-accent-line); border-radius: var(--radius); padding: var(--space-3); background: #15201c; display: grid; gap: 4px; flex: none; }
+.daily-summary__header { display: flex; align-items: center; gap: var(--space-2); color: var(--color-accent-text); }
+.daily-summary__title { flex: 1; }
+.daily-summary__job { display: flex; gap: var(--space-2); align-items: center; padding: 4px 0; color: var(--color-ink); width: 100%; }
+.daily-summary__job:hover { color: var(--color-accent-text); }
+.daily-summary__score { color: var(--color-accent); font-weight: 700; font-size: 12.5px; width: 34px; flex: none; }
+.daily-summary__footer { color: var(--color-ink-soft); font-size: 12.5px; }

@@ -1,0 +1,16 @@
+/* .sidebar: brand, the resume switcher, the screens, and a small footer. Desktop only. */
+.sidebar {
+  width: var(--sidebar-width); flex: none; background: var(--color-rail); border-right: 1px solid var(--color-line);
+  padding: var(--space-3) var(--space-3) var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); overflow-y: auto;
+}
+.sidebar__brand { display: flex; align-items: center; gap: var(--space-2); padding: 2px 4px var(--space-2); font-weight: 700; font-size: 15px; }
+.sidebar__logo { width: 28px; height: 28px; border-radius: 8px; background: linear-gradient(135deg, #2fd59a, #1d9bf0); display: grid; place-items: center; color: #04140d; }
+.sidebar__nav { display: grid; gap: 2px; margin-top: var(--space-2); }
+.sidebar__footer { margin-top: auto; display: grid; gap: var(--space-2); padding: var(--space-3) 4px 0; border-top: 1px solid var(--color-line); font-size: 12.5px; color: var(--color-ink-mid); }
+.sidebar__week b { color: var(--color-ink); }
+.sidebar__section-title { color: var(--color-ink-soft); font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: .05em; margin-top: var(--space-2); }
+.sidebar__due { display: block; width: 100%; padding: 4px 0; color: var(--color-ink-mid); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sidebar__due:hover { color: var(--color-ink); }
+.sidebar__due b { color: var(--color-warn); font-weight: 600; margin-right: 6px; }
+.sidebar__shortcuts { color: var(--color-ink-soft); text-decoration: underline; text-underline-offset: 3px; }
+.sidebar__shortcuts:hover { color: var(--color-ink); }

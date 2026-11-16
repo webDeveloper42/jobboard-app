@@ -1,0 +1,3 @@
+/* .spinner: a small spinning circle while something works. */
+.spinner { width: 15px; height: 15px; border: 2px solid var(--color-line-strong); border-top-color: var(--color-accent); border-radius: 50%; animation: spinner-turn .8s linear infinite; flex: none; display: inline-block; }
+@keyframes spinner-turn { to { transform: rotate(360deg); } }

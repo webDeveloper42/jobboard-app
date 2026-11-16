@@ -1,0 +1,15 @@
+/* .chip: a rounded option (suggested questions, filter chips, skills to add). --active is selected;
+   --checkable wraps a checkbox. .chip-list lays chips out in a wrapping row. */
+.chip {
+  display: inline-flex; align-items: center; gap: 5px; padding: 4px 11px; border: 1px solid var(--color-line); border-radius: 999px;
+  color: var(--color-ink-mid); background: var(--color-panel); font-size: 12.5px; white-space: nowrap; min-height: 28px;
+}
+button.chip:hover { border-color: var(--color-line-strong); color: var(--color-ink); }
+.chip--active { background: var(--color-accent-soft); border-color: var(--color-accent-line); color: var(--color-accent-text); }
+.chip--checkable { cursor: pointer; }
+.chip--checkable input { margin: 0; min-height: 0; accent-color: var(--color-accent); }
+.chip-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--space-3); }
+
+@media (max-width: 900px) { .chip { min-height: var(--touch-height); } }
+.chip__remove { color: inherit; opacity: .8; font-size: 15px; line-height: 1; padding: 0 2px; }
+.chip__remove:hover { opacity: 1; }

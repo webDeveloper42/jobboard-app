@@ -1,0 +1,9 @@
+/* .chat: the coach's messages. .ask-box: the question box under it. .working: "Writing… / Thinking…" with a spinner. */
+.chat { display: flex; flex-direction: column; gap: var(--space-3); }
+.chat:empty { display: none; }
+.chat__message { max-width: 85%; padding: 10px 13px; border-radius: 13px; white-space: pre-wrap; line-height: 1.55; }
+.chat__message--user { align-self: flex-end; background: #1f3a2f; color: #e2f8ee; border-bottom-right-radius: 4px; }
+.chat__message--assistant { align-self: flex-start; background: var(--color-panel-2); border: 1px solid var(--color-line); border-bottom-left-radius: 4px; }
+.ask-box { display: flex; gap: var(--space-2); margin-top: var(--space-3); }
+.ask-box__input { flex: 1; min-width: 0; }
+.working { display: flex; align-items: center; gap: var(--space-2); color: var(--color-ink-mid); padding: var(--space-2) 0; }

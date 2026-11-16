@@ -1,0 +1,9 @@
+/* .tag: a small label. Modifiers by meaning: --pay, --role, --new, --status, --danger, --warning. */
+.tag { padding: 1px 8px; border-radius: 5px; background: var(--color-panel-2); color: var(--color-ink-mid); font-size: 12px; font-weight: 500; white-space: nowrap; line-height: 20px; }
+.tag--pay { color: #c9f2df; background: #183329; }
+.tag--role { color: #e2d4ff; background: #2c2347; }
+.tag--new { color: #c9d6ff; background: #1f2a50; }
+.tag--status { color: #ffe3b0; background: #3a2e17; }
+.tag--danger { color: #ffc7cc; background: #3c1d23; }
+.tag--warning { color: #ffe0a3; background: #3a2c12; }
+.panel__note .tag, .resume-row__name .tag { margin-left: var(--space-2); }

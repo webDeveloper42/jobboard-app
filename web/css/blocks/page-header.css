@@ -1,0 +1,13 @@
+/* .page-header: a screen's title, a one-line summary under it, and its main buttons on the right. */
+.page-header { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-3); padding: var(--space-3) var(--space-5); border-bottom: 1px solid var(--color-line); flex: none; }
+.page-header__titles { min-width: 0; flex: 1 1 auto; }
+.page-header__title { font-size: 19px; line-height: 1.25; margin: 0; letter-spacing: -.01em; }
+.page-header__subtitle { margin: 2px 0 0; color: var(--color-ink-soft); font-size: 12.5px; }
+.page-header__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.page-header__updated { color: var(--color-ink-soft); font-size: 12.5px; }
+
+@media (max-width: 900px) {
+  .page-header { padding: var(--space-3) var(--space-4); }
+  .page-header__titles { flex: 1 1 0; }
+  .page-header__actions { flex-wrap: wrap; }
+}

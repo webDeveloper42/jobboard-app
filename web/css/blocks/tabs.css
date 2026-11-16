@@ -1,0 +1,5 @@
+/* .tabs: the tab row in the job detail. --active is the tab that's showing. */
+.tabs { display: flex; gap: var(--space-1); margin-top: var(--space-4); overflow-x: auto; scrollbar-width: none; }
+.tabs__tab { padding: 10px 12px; color: var(--color-ink-mid); border-bottom: 2px solid transparent; white-space: nowrap; font-weight: 550; }
+.tabs__tab:hover { color: var(--color-ink); }
+.tabs__tab--active { color: var(--color-ink); border-bottom-color: var(--color-accent); }

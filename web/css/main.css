@@ -1,0 +1,57 @@
+/* Jobs page styles. One file per BEM block in blocks/; shared values in base/tokens.css.
+   Naming: .block, .block__element, .block--modifier (see web/README.md). Order matters: base first, then blocks,
+   then utilities (u-*) so they can override. */
+@import url("base/tokens.css");
+@import url("base/reset.css");
+
+@import url("blocks/app.css");
+@import url("blocks/sidebar.css");
+@import url("blocks/nav-item.css");
+@import url("blocks/resume-switcher.css");
+@import url("blocks/bottom-nav.css");
+@import url("blocks/page-header.css");
+@import url("blocks/page.css");
+@import url("blocks/toolbar.css");
+@import url("blocks/search-field.css");
+@import url("blocks/segmented.css");
+@import url("blocks/count-pill.css");
+@import url("blocks/filter-panel.css");
+@import url("blocks/active-filters.css");
+@import url("blocks/button.css");
+@import url("blocks/chip.css");
+@import url("blocks/field.css");
+@import url("blocks/split-view.css");
+@import url("blocks/job-card.css");
+@import url("blocks/facts.css");
+@import url("blocks/tag.css");
+@import url("blocks/match-ring.css");
+@import url("blocks/daily-summary.css");
+@import url("blocks/job-detail.css");
+@import url("blocks/tabs.css");
+@import url("blocks/menu.css");
+@import url("blocks/panel.css");
+@import url("blocks/callout.css");
+@import url("blocks/description.css");
+@import url("blocks/skill.css");
+@import url("blocks/meter.css");
+@import url("blocks/score-bars.css");
+@import url("blocks/document.css");
+@import url("blocks/chat.css");
+@import url("blocks/history.css");
+@import url("blocks/empty-state.css");
+@import url("blocks/spinner.css");
+@import url("blocks/tracker.css");
+@import url("blocks/kanban.css");
+@import url("blocks/drawer.css");
+@import url("blocks/resume-row.css");
+@import url("blocks/source-row.css");
+@import url("blocks/switch.css");
+@import url("blocks/usage.css");
+@import url("blocks/skills-editor.css");
+@import url("blocks/hide-rules.css");
+@import url("blocks/shortcut-list.css");
+@import url("blocks/toast.css");
+@import url("blocks/dialog.css");
+@import url("blocks/coach.css");
+
+@import url("base/utilities.css");

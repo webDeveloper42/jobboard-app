@@ -1,0 +1,26 @@
+/* .button: every button. Modifiers: --primary (the main action), --ghost (no fill), --danger (red text),
+   --small, --active (a toggle that's on). .button-row lays buttons out in a wrapping row. .icon-button is icon-only. */
+.button {
+  text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 13px;
+  min-height: var(--control-height); border: 1px solid var(--color-line); border-radius: var(--radius-sm); color: var(--color-ink);
+  background: var(--color-panel-2); font-weight: 550; white-space: nowrap;
+}
+.button:hover:not(:disabled) { border-color: var(--color-line-strong); background: var(--color-raised); }
+.button--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); font-weight: 700; }
+.button--primary:hover:not(:disabled) { filter: brightness(1.07); background: var(--color-accent); }
+.button--ghost { background: none; }
+.button--ghost:hover:not(:disabled) { background: var(--color-panel-2); }
+.button--danger { color: #ffb3ba; }
+.button--small { padding: 4px 10px; min-height: 30px; font-size: 12.5px; }
+.button--active { border-color: var(--color-accent-line); }
+
+.button-row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; margin-top: var(--space-3); }
+.button-row--end { justify-content: flex-end; }
+
+.icon-button { width: 28px; height: 28px; display: grid; place-items: center; border-radius: var(--radius-sm); color: var(--color-ink-soft); }
+.icon-button:hover { background: var(--color-raised); color: var(--color-ink); }
+
+@media (max-width: 900px) {
+  .button { min-height: var(--touch-height); }
+  .button--small { min-height: 38px; }
+}

@@ -1,0 +1,10 @@
+/* .toolbar: search, then the view tabs, work type, sort and Filters. On phones the second row scrolls sideways. */
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding: var(--space-3) var(--space-5); border-bottom: 1px solid var(--color-line); flex: none; }
+.toolbar__row { display: contents; }
+.toolbar__sort select { min-height: 38px; border-radius: var(--radius); background: var(--color-panel); }
+
+@media (max-width: 900px) {
+  .toolbar { padding: var(--space-3) var(--space-4); }
+  .toolbar__row { display: flex; gap: var(--space-2); overflow-x: auto; width: 100%; scrollbar-width: none; padding-bottom: 2px; }
+  .toolbar__row > * { flex: none; }
+}

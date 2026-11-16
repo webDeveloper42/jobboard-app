@@ -1,0 +1,52 @@
+/* Design tokens: every colour, size and radius the page uses. Change a value here to change it everywhere. */
+:root {
+  color-scheme: dark;
+
+  /* surfaces, darkest to lightest */
+  --color-bg: #121317;
+  --color-rail: #0e0f12;
+  --color-panel: #1a1b20;
+  --color-panel-2: #22242a;
+  --color-raised: #2a2c33;
+  --color-line: #2d2f37;
+  --color-line-strong: #3a3d47;
+  --color-track: #2c2e36;
+
+  /* text */
+  --color-ink: #eef0f4;
+  --color-ink-mid: #b3b7c2;
+  --color-ink-soft: #8d929e;          /* the faintest text that still reads at 4.5:1 on --color-panel */
+
+  /* accents */
+  --color-accent: #2fd59a;
+  --color-accent-ink: #062418;
+  --color-accent-soft: #143a2c;
+  --color-accent-line: #2a7a5c;
+  --color-accent-text: #c4f6df;
+  --color-accent-wash: #17211d;
+  --color-blue: #7c9bff;
+  --color-warn: #f0b04a;
+  --color-bad: #f07a86;
+  --color-link: #93d6ff;
+
+  /* spacing scale (4px steps) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .45);
+
+  --control-height: 36px;
+  --touch-height: 44px;               /* buttons on phones */
+  --bottom-nav-height: 64px;
+  --sidebar-width: 224px;
+}

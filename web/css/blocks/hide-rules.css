@@ -1,0 +1,4 @@
+/* .hide-rules: the two lists on the Profile screen (companies, words) with a box to add to each. */
+.hide-rules { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.hide-rules__group { display: grid; align-content: start; gap: var(--space-2); }
+.hide-rules__group .chip-list, .hide-rules__group .button-row { margin-top: 0; }

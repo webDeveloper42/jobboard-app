@@ -1,0 +1,8 @@
+/* .segmented: a row of options in one pill (All / New today / Not interested; Remote / Hybrid / On-site). */
+.segmented { display: inline-flex; background: var(--color-panel); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 3px; gap: 2px; }
+.segmented__option { padding: 5px 11px; border-radius: 7px; color: var(--color-ink-mid); font-size: 13px; display: inline-flex; align-items: center; gap: 6px; min-height: 30px; white-space: nowrap; }
+.segmented__option:hover { color: var(--color-ink); }
+.segmented__option--active { background: var(--color-raised); color: var(--color-ink); font-weight: 600; }
+.segmented--small .segmented__option--active { background: var(--color-accent-soft); color: var(--color-accent-text); }
+
+@media (max-width: 900px) { .segmented__option { min-height: var(--touch-height); } }

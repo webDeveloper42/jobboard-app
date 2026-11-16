@@ -1,0 +1,6 @@
+/* .skill: one skill. --have (on your profile, green) or --missing (dashed). .skill-list lays them out. */
+.skill-list { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.skill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 999px; font-size: 12.5px; }
+.skill--have { background: var(--color-accent-soft); color: #b0f1d3; }
+.skill--missing { color: var(--color-ink-mid); border: 1px dashed var(--color-line-strong); }
+.skill__remove { color: #7fcfae; font-size: 15px; line-height: 1; padding: 0 2px; }

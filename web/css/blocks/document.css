@@ -1,0 +1,5 @@
+/* .document: a tailored resume or cover letter in the Apply kit. */
+.document { border: 1px solid var(--color-line); border-radius: var(--radius); margin-top: var(--space-3); background: var(--color-panel-2); }
+.document__header { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-line); font-size: 12.5px; }
+.document__body { white-space: pre-wrap; margin: 0; padding: var(--space-3) var(--space-4); font: inherit; line-height: 1.6; max-height: 460px; overflow-y: auto; }
+.document__editor { border: 0; border-radius: 0 0 var(--radius) var(--radius); min-height: 320px; background: var(--color-panel-2); }

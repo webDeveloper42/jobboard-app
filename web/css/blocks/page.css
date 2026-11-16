@@ -1,0 +1,6 @@
+/* .page: a scrolling screen of panels (Profile, Job boards). __inner keeps lines a readable width. */
+.page { padding: 0 var(--space-5) var(--space-6); overflow-y: auto; flex: 1; }
+.page__inner { max-width: 880px; }
+.section-title { color: var(--color-ink-soft); font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: .05em; margin: var(--space-4) 0 var(--space-2); }
+
+@media (max-width: 900px) { .page { padding: 0 var(--space-4) var(--space-6); } }

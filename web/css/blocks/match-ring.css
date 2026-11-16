@@ -1,0 +1,21 @@
+/* .match-ring: the circular match score. The fill comes from --match-ring-value (0-100), set inline.
+   Colour bands: default (80+), --good (65+), --fair (50+), --weak. --large is the job detail size. */
+.match-ring {
+  --match-ring-colour: var(--color-accent);
+  width: 48px; height: 48px; flex: none; border-radius: 50%; display: grid; place-items: center; position: relative; align-self: flex-start;
+  background: conic-gradient(var(--match-ring-colour) calc(var(--match-ring-value, 0) * 1%), var(--color-track) 0);
+}
+.match-ring::before { content: ""; position: absolute; inset: 4px; border-radius: 50%; background: var(--color-panel); }
+.match-ring__value { position: relative; font-weight: 750; font-size: 13px; text-align: center; line-height: 1.1; }
+.match-ring__label { display: block; font-size: 10px; color: var(--color-ink-soft); font-weight: 500; }
+.match-ring--large { width: 80px; height: 80px; }
+.match-ring--large::before { inset: 7px; background: var(--color-bg); }
+.match-ring--large .match-ring__value { font-size: 21px; }
+.match-ring--good { --match-ring-colour: #8fd46a; }
+.match-ring--fair { --match-ring-colour: var(--color-warn); }
+.match-ring--weak { --match-ring-colour: #7b7f8c; }
+
+@media (max-width: 900px) {
+  .match-ring--large { width: 64px; height: 64px; }
+  .match-ring--large .match-ring__value { font-size: 17px; }
+}

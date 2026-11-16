@@ -1,0 +1,4 @@
+/* .shortcut-list: the keyboard shortcuts dialog. */
+.shortcut-list { border-collapse: collapse; width: 100%; }
+.shortcut-list__row td { padding: 6px 0; border-bottom: 1px solid var(--color-line); color: var(--color-ink-mid); }
+.shortcut-list__key { width: 110px; }

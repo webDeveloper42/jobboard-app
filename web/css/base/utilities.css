@@ -1,0 +1,15 @@
+/* Utilities: single-purpose helpers, always prefixed u-. Loaded last so they win. */
+.u-muted { color: var(--color-ink-soft); }
+.u-small { font-size: 12.5px; }
+.u-center { text-align: center; justify-content: center; }
+.u-ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.u-spacer { flex: 1; }
+.u-grow { flex: 1 1 220px; min-width: 0; }
+.u-sr-only { position: absolute; left: 0; top: 0; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.u-offscreen { position: fixed; left: -9999px; opacity: 0; }
+.u-phone-only { display: none; }
+
+@media (max-width: 900px) {
+  .u-hide-phone { display: none; }
+  .u-phone-only { display: block; }
+}

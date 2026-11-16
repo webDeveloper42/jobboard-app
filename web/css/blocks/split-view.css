@@ -1,0 +1,12 @@
+/* .split-view: a list on the left and the open item on the right. On phones the detail covers the screen. */
+.split-view { flex: 1; min-height: 0; display: flex; }
+.split-view__list { width: 42%; min-width: 340px; max-width: 540px; border-right: 1px solid var(--color-line); overflow-y: auto; padding: var(--space-3); display: flex; flex-direction: column; gap: var(--space-2); }
+.split-view__detail { flex: 1; min-width: 0; overflow-y: auto; }
+
+@media (max-width: 1180px) { .split-view__list { width: 46%; min-width: 300px; } }
+@media (max-width: 900px) {
+  .split-view { flex-direction: column; }
+  .split-view__list { width: 100%; max-width: none; min-width: 0; border-right: 0; flex: 1; }
+  .split-view__detail--empty { display: none; }
+  .split-view__detail:not(.split-view__detail--empty) { position: fixed; inset: 0 0 var(--bottom-nav-height); background: var(--color-bg); z-index: 20; }
+}

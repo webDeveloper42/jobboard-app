@@ -1,0 +1,5 @@
+/* .callout: an amber notice inside a panel ("Only part of the post came through"). */
+.callout { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); padding: var(--space-3); margin-bottom: var(--space-3); border: 1px solid #5a4a22; background: #2a2414; border-radius: var(--radius); color: #f3e2b9; }
+.callout__text { flex: 1 1 260px; }
+.callout--info { border-color: #3a4a7a; background: #1a2140; color: #d6defa; }
+.callout__list { margin: var(--space-2) 0 0; padding-left: 18px; display: grid; gap: 2px; }

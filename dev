@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Developer commands. Run from anywhere:  ./dev test | ./dev browser | ./dev check
+#   test     the engine tests (Python) and the page's unit tests (Node)
+#   browser  start a throwaway copy of the dashboard on a COPY of your data, and click through the page
+#   check    both
+set -euo pipefail
+ROOT="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")" && pwd)"
+NODE="$(command -v node || echo "$HOME/.local/node/bin/node")"
+cd "$ROOT"
+
+run_tests() {
+  echo "== engine tests"; python3 -m unittest discover -s tests
+  echo "== page unit tests"; "$NODE" --test web/tests/*.test.mjs
+}
+
+run_browser() {
+  local tmp port=8899
+  SERVER_PID=""
+  tmp="$ROOT/.scratch/browser-$$"; mkdir -p "$tmp/jobs" "$tmp/shots"
+  # A copy of your real database, with API keys removed so nothing can spend a search.
+  python3 - "$tmp/jobs/jobboard.db" <<'PY'
+import sqlite3, sys, pathlib
+src = pathlib.Path("data/jobboard.db")
+dst = sqlite3.connect(sys.argv[1])
+if src.exists():
+    sqlite3.connect(f"file:{src}?mode=ro", uri=True).backup(dst)
+    dst.execute("DELETE FROM settings WHERE key IN ('serpapi_key', 'jooble_key')"); dst.commit()
+PY
+  python3 "$HOME/sheets-app/tests/serve_isolated.py" "$port" "$tmp" >"$tmp/server.log" 2>&1 &
+  SERVER_PID=$!
+  trap '[ -n "${SERVER_PID:-}" ] && kill "$SERVER_PID" 2>/dev/null || true' EXIT
+  sleep 3
+  "$NODE" web/tests/smoke.browser.mjs "http://127.0.0.1:$port/jobs/" "$tmp/shots"
+  echo "Screenshots: $tmp/shots"
+}
+
+case "${1:-check}" in
+  test) run_tests ;;
+  browser) run_browser ;;
+  check) run_tests; run_browser ;;
+  *) echo "usage: ./dev test | browser | check"; exit 2 ;;
+esac

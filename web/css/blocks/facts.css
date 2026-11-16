@@ -1,0 +1,5 @@
+/* .facts: short facts in a row, separated by dots (pay, commute, posted…). --large in the job detail. */
+.facts { display: flex; flex-wrap: wrap; gap: 2px var(--space-3); margin-top: 6px; color: var(--color-ink-soft); font-size: 12.5px; }
+.facts__item + .facts__item::before { content: "·"; margin-right: var(--space-3); color: var(--color-line-strong); }
+.facts__item--pay { color: #b9f0d6; font-weight: 600; }
+.facts--large { font-size: 13px; margin-top: var(--space-2); }

@@ -1,0 +1,4 @@
+/* .description: a job post's text. --collapsed fades out after a few paragraphs until "Show the whole post". */
+.description { white-space: pre-wrap; color: #d6d9e0; line-height: 1.65; font-size: 14px; max-width: 72ch; }
+.description--collapsed { max-height: 360px; overflow: hidden; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent); }
+.description__toggle { margin-top: var(--space-2); }

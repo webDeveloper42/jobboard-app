@@ -1,0 +1,5 @@
+/* .skills-editor: your skills as removable chips, with a box to type new ones. */
+.skills-editor { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 6px; border: 1px solid var(--color-line); border-radius: var(--radius-sm); background: var(--color-panel-2); }
+.skills-editor:focus-within { border-color: var(--color-accent); }
+.skills-editor__input { border: 0; background: none; flex: 1; min-width: 160px; padding: 4px; min-height: 0; }
+.skills-editor__input:focus-visible { outline: none; }

@@ -1,0 +1,6 @@
+/* .panel: a card with a title row. __note sits after the title; __actions sit on the right. */
+.panel { background: var(--color-panel); border: 1px solid var(--color-line); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); margin-top: var(--space-4); }
+.panel__title { margin: 0 0 var(--space-3); font-size: 15px; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.panel__note { color: var(--color-ink-soft); font-size: 12.5px; font-weight: 400; }
+.panel__actions { margin-left: auto; display: inline-flex; flex-wrap: wrap; gap: var(--space-2); }
+.panel p { margin: 0 0 var(--space-2); }

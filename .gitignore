@@ -1,0 +1,10 @@
+# Your data never goes in the repo: the job database (resumes, API keys, applications) and its backups.
+data/
+backups/
+*.db
+*.db-shm
+*.db-wal
+__pycache__/
+*.pyc
+.env
+.scratch/

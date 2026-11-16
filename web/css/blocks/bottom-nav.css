@@ -1,0 +1,11 @@
+/* .bottom-nav: the screens as a tab bar along the bottom. Phones only. */
+.bottom-nav { display: none; }
+
+@media (max-width: 900px) {
+  .bottom-nav {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; height: var(--bottom-nav-height); background: var(--color-rail);
+    border-top: 1px solid var(--color-line); z-index: 30; padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bottom-nav__item { flex: 1; display: grid; place-items: center; align-content: center; gap: 2px; font-size: 11px; color: var(--color-ink-soft); }
+  .bottom-nav__item--active { color: var(--color-accent); }
+}
